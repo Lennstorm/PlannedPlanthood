@@ -1,0 +1,510 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Maven+Pro:wght@400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+/* Kod som gäller hela dokumentet */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #FCF6FC;
+}
+
+button:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+button:active {
+    transform: scale(1);
+}
+
+body .wrapper {
+    max-width: 1000px;
+    margin: auto;
+    box-shadow: 0 5px 5px #9a989894;
+    background-color: white;
+}
+
+/* Headerkoden */
+header #headerGrid {
+    height: 540px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+header #handPicture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: auto/auto/ span 2 / span 1;
+    background-image: url(assets/hand-header.png);
+}
+
+.headerAsideTop {
+    grid-area: auto/auto/ span 1/ span 1;
+    background-color: #9E6D52;
+    background-image: url(assets/seedling.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.headerAsideBottom {
+    grid-area: auto/auto/ span 1/ span 1;
+    background-color: #0A846E;
+    background-image: url(assets/dig.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 2rem;
+    align-items: center;
+    height: 60px;
+    box-shadow: 0 2px #03382F1C;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #055647;
+    font-family: 'Maven Pro', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* Planned Planthood */
+
+body .wrapper h1 {
+    color: #0A846E;
+    font-size: 48px;
+    font-family: 'Maven Pro', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+body .wrapper .seasonFlexbox {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 6rem;
+}
+
+body .wrapper .seasonFlexbox .circleBg {
+    width: 377px;
+    height: 377px;
+    border-radius: 50%;
+    background-color: #0A846E;
+    background-image: url(assets/Vectorseedpackage.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+body .wrapper .seasonFlexbox .season {
+    font-family: 'Open Sans', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+}
+
+body .wrapper .seasonFlexbox .season h2 {
+
+    font-weight: 700;
+    font-size: 32px;
+}
+
+body .wrapper .seasonFlexbox .season p {
+    max-width: 467px;
+    padding: 1rem 0 2rem 0;
+}
+
+body .wrapper .seasonFlexbox .season button {
+    background-color: #0A846E;
+    border: none;
+    box-shadow: 1px 4px 4px rgb(153, 151, 151);
+    width: 179px;
+    font-weight: 700;
+    font-size: 24px;
+    color: white;
+    border-radius: 9px;
+    padding: .9rem 0;
+    align-self: end;
+}
+
+body .wrapper hr {
+    width: 303.24px;
+    height: .25rem;
+    background-color: #055647;
+    margin: 4rem auto;
+}
+
+/* Våra planerade planteringar */
+
+body .wrapper #gridSection {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 60px 1fr 1fr 65px;
+    display: grid;
+    gap: 2.7rem 1.7rem;
+    margin: 0 2rem 5rem 2rem;
+}
+
+body .wrapper #gridSection h2 {
+    grid-column: 1 / span 3;
+    justify-self: center;
+    font-family: 'Lato', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+body .wrapper #gridSection article figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body .wrapper #gridSection .seedCard {
+    width: 293.54px;
+    box-shadow: 3px 4px 2px rgba(130, 130, 130, 0.503);
+    font-family: 'Lato', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body .wrapper #gridSection .seedCard article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 1rem;
+    height: 111px;
+}
+
+body .wrapper #gridSection .seedCard article h3 {
+    font-weight: 600;
+    font-size: 24px;
+}
+
+body .wrapper #gridSection .seedCard figure .pot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body .wrapper #gridSection .seedCard article .seedCardDate {
+    font-family: 'Open Sans', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    justify-self: end;
+    padding-top: 4px;
+}
+
+body .wrapper #gridSection .seedCard article .seedCardName {
+    font-weight: 300;
+    font-size: 16px;
+    justify-self: start;
+    align-self: center
+}
+
+body .wrapper #gridSection .seedCard article .seedCardButton {
+    font-family: 'Open Sans', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    width: 96.88px;
+    height: 30px;
+    border: none;
+    border-radius: 9px;
+    background-color: #B93857;
+    color: white;
+    justify-self: end;
+    align-self: center;
+}
+
+body .wrapper #gridSection .seedCardCucumber {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+body .wrapper #gridSection .seedCardCucumber .cucumber {
+    background-image: url(assets/cucumber.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 296px;
+}
+
+body .wrapper #gridSection .seedCardTomato {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+body .wrapper #gridSection .seedCardTomato .tomato {
+    background-image: url(assets/tomato.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 293.54px;
+    height: 296px;
+}
+
+body .wrapper #gridSection .seedCardTomatoSmall {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
+
+body .wrapper #gridSection .seedCardTomatoSmall .tomatoSmall {
+    background-image: url(assets/tomato-small.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 293.54px;
+    height: 296px;
+}
+
+body .wrapper #gridSection .seedCardSugarsnap {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+}
+
+body .wrapper #gridSection .seedCardSugarsnap .sugarsnap {
+    background-image: url(assets/sugarsnaps.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 293.54px;
+    height: 296px;
+}
+
+body .wrapper #gridSection .seedCardTurnip {
+    grid-column: 2/3;
+    grid-row: 3/4
+}
+
+body .wrapper #gridSection .seedCardTurnip .turnip {
+    background-image: url(assets/turnip.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 293.54px;
+    height: 296px;
+}
+
+body .wrapper #gridSection .seedCardSquash {
+    grid-column: 3/4;
+    grid-row: 3/4;
+}
+
+body .wrapper #gridSection .seedCardSquash .squash {
+    background-image: url(assets/squash.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 293.54px;
+    height: 296px;
+}
+
+body .wrapper #gridSection #showMoreButton {
+    width: 157px;
+    height: 63px;
+    grid-column: 2/3;
+    grid-row: 4/5;
+    border: none;
+    border-radius: 8px;
+    background-color: #0A846E;
+    color: white;
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 24px;
+    margin: 1rem auto;
+    box-shadow: 1px 4px 4px rgb(153, 151, 151);
+}
+
+/* Våra tidigare odlingar */
+
+body .wrapper .seasonFlexbox .season #buttonLeft {
+    width: 281px;
+    height: 3.9375rem;
+    align-self: start;
+}
+
+body .wrapper .seasonFlexbox .circleBg-2 {
+    width: 377px;
+    height: 377px;
+    border-radius: 50%;
+    background-color: #0A846E;
+    background-image: url(assets/pot.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+/* Footer */
+
+body .wrapper #footerGrid {
+    font-family: 'Maven Pro', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    height: 590px;
+    background-image: url(assets/hand-footer.png);
+    background-repeat: no-repeat;
+}
+
+body .wrapper #footerGrid #leftBackground {
+    display: grid;
+    background: rgba(0, 0, 0, 0.790);
+    padding: 1rem;
+    grid-area: auto / auto / span 8 / span 4;
+}
+
+body .wrapper #footerGrid #rightBackground {
+    display: grid;
+    background-color: #05564733;
+    grid-area: auto / auto / span 8 / span 4;
+}
+
+body .wrapper #footerGrid #leftBackground nav {
+    display: flex;
+    justify-content: space-between;
+    grid-area: 8 / 1 / 9 / span 4;
+    /* Starta rad 8 / Starta kolumn 1 / Sluta innan rad 9 / täck 4 kolumner */
+    align-items: center;
+}
+
+body .wrapper #footerGrid #leftBackground nav article {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 10rem;
+}
+
+body .wrapper #footerGrid #leftBackground h2 {
+    font-size: 4rem;
+    color: white;
+    font-weight: 500;
+    grid-area: 4 / 2 / span 2 / span 2;
+    justify-self: center;
+    align-self: center;
+}
+
+body .wrapper #footerGrid #logoFooter {
+    justify-self: center;
+    align-self: center;
+}
+
+body .wrapper #footerGrid a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.25rem;
+}
+
+body .wrapper footer .backTopNav {
+    height: 5rem;
+    margin-bottom: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body .wrapper footer .backTopNav a {
+    text-decoration: none;
+    color: blacK;
+    font-family: 'Open Sans', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.5rem;
+}
+
+
+/* page2-CSS */
+
+header #page2headerpic {
+    font-family: 'Maven Pro', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-image: url(assets/hand-footer.png);
+    height: 379px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-position: 0cm;
+
+}
+
+header #page2headerpic div {
+    backdrop-filter: brightness(80%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+header #page2headerpic h3 {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 500;
+    padding: 2rem;
+}
+
+body .wrapper form {
+    font-family: 'Open Sans', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    padding: 2rem;
+}
+
+body .wrapper form section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 95px;
+}
+
+body .wrapper form h2 {
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+
+body .wrapper form section label {
+    align-self: end;
+}
+
+body .wrapper form input[type=text] {
+    width: 442px;
+    height: 45px;
+    border: 1px solid white;
+    border-radius: 4px;
+    box-shadow: 2px 4px 3px #c6c0c040, -2px 4px 3px #c6c0c040;
+}
+
+body .wrapper form input[type=text]:hover {
+    border: 2px solid #0A846E;
+}
+
+body .wrapper form input[type=submit] {
+    background-color: #0A846E;
+    border: none;
+    box-shadow: 1px 4px 4px rgb(153, 151, 151);
+    width: 179px;
+    height: 63px;
+    font-family: 'Open Sans', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: white;
+    border-radius: 9px;
+    padding: .9rem 0;
+    grid-area: auto / auto /span 2 / span 2;
+    justify-self: center;
+    align-self: end;
+    cursor: pointer;
+}
+
+body .wrapper form input[type=submit]:hover {
+    transform: scale(1.02);
+}
+
+body .wrapper form input[type=submit]:active {
+    transform: scale(1);
+}
+
+footer .gallery {
+    padding-top: 15rem;
+    display: flex;
+    justify-content: center;
+}
+
+footer .gallery img {
+    margin: 0 .5rem;
+}
